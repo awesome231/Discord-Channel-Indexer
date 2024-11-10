@@ -10,4 +10,6 @@ Instructions:
 Script will die when theres no more messages, it will stay open
 When script finished it prints a total message count and the path to the file
 
+THIS SCRIPT DOES NOT STEAL ANY INFORMATION!! **MAKE IT A HABIT TO CHECK CODE BEFORE RUNNING IT!!**
+
 ⚠ USING THIS IS A VIOLATION AGAINST DISCORD'S TERMS OF SERVICE USE AT YOUR OWN RISK!!!!!! ⚠ (alt)
