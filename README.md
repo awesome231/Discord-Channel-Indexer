@@ -15,3 +15,5 @@ When script finished it prints a total message count and the path to the file
 THIS SCRIPT DOES NOT STEAL ANY INFORMATION!! **MAKE IT A HABIT TO CHECK CODE BEFORE RUNNING IT!!**
 
 ⚠ USING THIS IS A VIOLATION AGAINST DISCORD'S TERMS OF SERVICE USE AT YOUR OWN RISK!!!!!! ⚠ (alt)
+
+default log settings go to the root of your drive
