@@ -7,6 +7,7 @@ token = '' # ENTER DISCORD TOKEN, DO NOT SHARE EVER
 
 channel_id = '' # ENTER CHANNEL ID
 
+timeperrequest = '3' # CHANGE TIME PER MESSAGE GRAB 
 
 
 headers = {
@@ -118,7 +119,7 @@ while True:
             print(f"messages counted so far: {messagecount}")
             messageid = msgs[-1].get('id')
             msgs = {}
-            time.sleep(3)
+            time.sleep(timeperrequest)
             firstmessage = 1
         else:
             print("FINISHED!!")
