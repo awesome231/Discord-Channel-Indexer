@@ -7,7 +7,7 @@ token = '' # ENTER DISCORD TOKEN, DO NOT SHARE EVER
 
 channel_id = '' # ENTER CHANNEL ID
 
-timeperrequest = '3' # CHANGE TIME PER MESSAGE GRAB 
+timeperrequest = 3 # CHANGE TIME PER MESSAGE GRAB 
 
 
 headers = {
