@@ -7,16 +7,21 @@ token = '' # ENTER DISCORD TOKEN, DO NOT SHARE EVER
 
 channel_id = '' # ENTER CHANNEL ID
 
-timeperrequest = 3 # CHANGE TIME PER MESSAGE GRAB 
+timeperrequest = 2 # CHANGE TIME PER MESSAGE GRAB
+
+# SET START TO 0 FOR LATEST MESSAGE, 1 TO START LOGGING FROM A MESSAGEID
+start = 0
+startmessageid = ''
 
 
 headers = {
-    'authorization': token,
-    'ascending': 'True'
+    'authorization': token
 }
 
 firstrequest = 0
 firstmessage = 0
+
+start = 0
 
 msg = {}
 name = {}
@@ -24,17 +29,16 @@ attachments = {}
 link = {}
 realname = {}
 messagecount = 0
-
 messageid = 0
-
-old = 0
-end = 0
-blah = 0
 
 while True:
     if firstrequest == 0:
-        msgs = requests.get(f'https://discord.com/api/v9/channels/{channel_id}/messages?limit=100', headers=headers)
-        firstrequest = 1
+        if start == 0:
+            msgs = requests.get(f'https://discord.com/api/v9/channels/{channel_id}/messages?limit=100', headers=headers)
+            firstrequest = 1
+        if start == 1:
+            msgs = requests.get(f'https://discord.com/api/v9/channels/{channel_id}/messages?before={startmessageid}&limit=100', headers=headers)
+            firstrequest = 1
     else:
         msgs = requests.get(f'https://discord.com/api/v9/channels/{channel_id}/messages?before={messageid}&limit=100', headers=headers)
     msgs = msgs.json()
@@ -48,6 +52,7 @@ while True:
     if firstrequest == 0:
         while a > b and messageamount > 0:
             b += 1
+            
             if currentmessage < messageamount:
                 msg[currentmessage] = msgs[currentmessage].get('content')
                 name[currentmessage] = msgs[currentmessage].get('author', {}).get('global_name')
