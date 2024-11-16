@@ -21,7 +21,6 @@ headers = {
 firstrequest = 0
 firstmessage = 0
 
-start = 0
 
 msg = {}
 name = {}
