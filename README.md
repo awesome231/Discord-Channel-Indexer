@@ -1,3 +1,5 @@
+i made this while i sucked dont judge
+
 **DISCORD CHANNEL INDEXER**
 
 THIS IS NOT A BOT AND USES YOUR **ACCOUNT TOKEN** TO GRAB MESSAGES
