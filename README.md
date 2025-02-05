@@ -1,4 +1,4 @@
-i made this while i sucked dont judge
+i made this while i sucked dont judge the code
 
 **DISCORD CHANNEL INDEXER**
 
